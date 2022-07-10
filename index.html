@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Form a Story</title>
+    </head>
+    <body>
+    <section id="top">
+        <img src="./La Rica Pizza.png" alt="Logo La Rica Pizza">
+    </section>
+
+    <section id="main">
+        <h1>Complete o Formulário -<br> E Peça A Sua Pizza!</h1>
+        <hr>
+        <form action="./pedido.html" method="GET">
+            <h2>Seus Dados:</h2>
+
+            <label for="nome">Seu nome e sobrenome:</label>
+            <input id="nome" type="text" name="nome" minlength="8" required>
+            <br>
+
+            <label for="email">Seu E-mail:</label>
+            <input id="email" type="text" name="email" minlength="8" required>
+            <br>
+
+            <label for="endereco">Seu endereço:</label>
+            <input id="endereco" type="text" name="endereco" minlength="10" required>
+            <br>
+
+            <label for="forma-de-pgto">Forma de pagamento:</label>
+            <select id="forma-de-pgto" name="forma-de-pgto">
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Cartão de Crédito">Cartão de Crédito</option>
+                <option value="Cartão de Débito">Cartão de Débito</option>
+                <option value="PIX">PIX</option>
+            </select>
+            <hr>
+            
+            <label for="tamanho-pizza">Tamanho da Sua Pizza:</label>
+            <select id="tamanho-pizza" name="tamanho-pizza" required>
+                <option value="pequena">Pequena (6 Pedaços)</option>
+                <option value="media">Média (8 Pedaços)</option>
+                <option value="grande">Grande (12 Pedaços)</option>
+            </select>
+            <br>
+
+            <label for="sabor-metade-1">Sabor da Primeira Metade:</label>
+            <select id="sabor-metade-1" name="sabor-metade-1" required>
+                <option value="calabresa">Calabresa</option>
+                <option value="mussarela">Mussarela</option>
+                <option value="frango-com-catupiry">Frango com Catupiry</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="4-queijos">4 Queijos</option>
+                <option value="portuguesa">Portuguesa</option>
+            </select>
+            <br>
+
+            <label for="sabor-metade-2">Sabor da Segunda Metade:</label>
+            <select id="sabor-metade-2" name="sabor-metade-2" required>
+                <option value="calabresa">Calabresa</option>
+                <option value="mussarela">Mussarela</option>
+                <option value="frango-com-catupiry">Frango com Catupiry</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="4-queijos">4 Queijos</option>
+                <option value="portuguesa">Portuguesa</option>
+            </select>
+            <br>
+
+            <label for="infos-adicionais">Informações adicionais:</label>
+            <br>
+            <textarea id="infos-adicionais" name="infos-adicionais" cols="40" rows="5" placeholder="Quer retirar alguma coisa?">
+            </textarea>
+
+            <h3>Preço da Pizza:</h3>
+            <h4 id="preco-da-pizza"></h4>
+            <hr>
+
+            <div id="botao-calc-preco">
+                <p>Calcular Preço</p>
+            </div>
+
+            <input type="submit" value="Fazer Meu Pedido">
+        </form> 
+    </section>
+
+    <script src="./main.js"></script>
+    <script src="./calc-preco.js"></script>
+    </body>
+</html>
