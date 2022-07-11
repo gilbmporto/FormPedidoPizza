@@ -10,6 +10,13 @@ function cleanAndCap (str){
     return temp[0].toUpperCase() + temp.substring(1)
 }
 
+//Removes the '-' from the damn string
+function removesThatThing (str) {
+    let newWord;
+    newWord = str.replace(/-/g, ' ');
+    return newWord;
+    }
+
 // Assigning the variables with values used in the request
 const FullName = cleanAndCap(words.get("nome"));
 const email = cleanAndCap(words.get("email"));
@@ -17,8 +24,8 @@ const endereco = words.get("endereco");
 const formaDePgto = words.get("forma-de-pgto");
 
 const tamanhoDaPizza = cleanAndCap(words.get("tamanho-pizza"));
-const saborDa1Metade = cleanAndCap(words.get("sabor-metade-1"));
-const saborDa2Metade = cleanAndCap(words.get("sabor-metade-2"));
+const saborDa1Metade = cleanAndCap(removesThatThing(words.get("sabor-metade-1")));
+const saborDa2Metade = cleanAndCap(removesThatThing(words.get("sabor-metade-2")));
 const infosAdicionais = words.get("infos-adicionais");
 
 //Showing the data to the client right down here
