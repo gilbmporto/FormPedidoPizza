@@ -1,8 +1,11 @@
+//Define the HTML Elements
 var tamanhoPizza = document.getElementById("tamanho-pizza");
 var saborMetade1 = document.getElementById("sabor-metade-1");
 var saborMetade2 = document.getElementById("sabor-metade-2");
 const botaoCalcPreco = document.getElementById("botao-calc-preco");
 var precoDaPizzaTexto = document.getElementById("preco-da-pizza");
+
+//Define the variables to store the price of every size of pizza and its flavour.
 var precoBasePizzaPequena = 20;
 var precoBasePizzaMedia = 30;
 var precoBasePizzaGrande = 40;
@@ -13,6 +16,8 @@ var precoMetadePepperoni = 9;
 var precoMetadePortuguesa = 6;
 var precoMetade4Queijos = 7
 var precoTotalSalvo;
+
+//This function was created long ago, when I was still developing my programming skills. I wanted to export this function to './main.js', but I thought of a better solution by using a for loop. :D
 
 function calcularPreco() {
     if (tamanhoPizza.value === 'pequena') {
@@ -277,6 +282,7 @@ function calcularPreco() {
         return window.alert('Algo deu errado');
     };
 };
+
 
 botaoCalcPreco.addEventListener('click', () => {
     calcularPreco();
